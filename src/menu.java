@@ -13,6 +13,7 @@ import javax.swing.border.BevelBorder;
 import java.awt.ComponentOrientation;
 import javax.swing.JButton;
 import java.awt.Toolkit;
+import javax.swing.JComboBox;
 
 public class menu extends JFrame {
 
@@ -234,5 +235,37 @@ public class menu extends JFrame {
 		lblNewLabel_1_2_2.setFont(new Font("Leelawadee UI", Font.PLAIN, 18));
 		lblNewLabel_1_2_2.setBounds(64, 66, 182, 49);
 		contentPane.add(lblNewLabel_1_2_2);
+		
+		JPanel panel_1_2 = new JPanel();
+		panel_1_2.setForeground(Color.WHITE);
+		panel_1_2.setBorder(new MatteBorder(2, 0, 2, 0, (Color) new Color(0, 0, 0)));
+		panel_1_2.setBackground(Color.WHITE);
+		panel_1_2.setBounds(64, 561, 723, 7);
+		contentPane.add(panel_1_2);
+		
+		JLabel lblNewLabel_1_1_3_2 = new JLabel("PHP 499.00");
+		lblNewLabel_1_1_3_2.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_1_3_2.setForeground(Color.WHITE);
+		lblNewLabel_1_1_3_2.setFont(new Font("Leelawadee UI", Font.BOLD, 20));
+		lblNewLabel_1_1_3_2.setBounds(80, 590, 119, 49);
+		contentPane.add(lblNewLabel_1_1_3_2);
+		
+		JLabel lblNewLabel_1_1_1_1_2 = new JLabel("800");
+		lblNewLabel_1_1_1_1_2.setIcon(new ImageIcon("C:\\Users\\Ernest\\eclipse-workspace\\SecondSemester\\img\\icons8-robux-24.png"));
+		lblNewLabel_1_1_1_1_2.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_1_1_1_2.setForeground(Color.WHITE);
+		lblNewLabel_1_1_1_1_2.setFont(new Font("Leelawadee UI", Font.BOLD, 20));
+		lblNewLabel_1_1_1_1_2.setBorder(new MatteBorder(2, 2, 2, 2, (Color) new Color(255, 255, 255)));
+		lblNewLabel_1_1_1_1_2.setBackground(Color.WHITE);
+		lblNewLabel_1_1_1_1_2.setBounds(320, 590, 119, 49);
+		contentPane.add(lblNewLabel_1_1_1_1_2);
+		
+		JLabel lblNewLabel_1_1_2_1_2 = new JLabel("1,000/month");
+		lblNewLabel_1_1_2_1_2.setIcon(new ImageIcon("C:\\Users\\Ernest\\eclipse-workspace\\SecondSemester\\img\\icons8-robuxwhite-24.png"));
+		lblNewLabel_1_1_2_1_2.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_1_2_1_2.setForeground(Color.WHITE);
+		lblNewLabel_1_1_2_1_2.setFont(new Font("Leelawadee UI", Font.BOLD, 20));
+		lblNewLabel_1_1_2_1_2.setBounds(576, 590, 157, 49);
+		contentPane.add(lblNewLabel_1_1_2_1_2);
 	}
 }

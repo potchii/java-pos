@@ -15,7 +15,7 @@ import javax.swing.JButton;
 import java.awt.Toolkit;
 import javax.swing.JComboBox;
 
-public class menu_1 extends JFrame {
+public class menu_2 extends JFrame {
 
 	private JPanel contentPane;
 
@@ -38,7 +38,7 @@ public class menu_1 extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public menu_1() {
+	public menu_2() {
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Ernest\\eclipse-workspace\\SecondSemester\\img\\icons8-roblox-48.png"));
 		setTitle("Roblox - Pricing");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -57,14 +57,14 @@ public class menu_1 extends JFrame {
 		panel.setBounds(64, 116, 723, 7);
 		contentPane.add(panel);
 		
-		JLabel lblNewLabel_1_1 = new JLabel("PHP 699.00");
+		JLabel lblNewLabel_1_1 = new JLabel("PHP 2,490.00");
 		lblNewLabel_1_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1_1.setForeground(Color.WHITE);
 		lblNewLabel_1_1.setFont(new Font("Leelawadee UI", Font.BOLD, 20));
-		lblNewLabel_1_1.setBounds(80, 145, 119, 49);
+		lblNewLabel_1_1.setBounds(80, 145, 126, 49);
 		contentPane.add(lblNewLabel_1_1);
 		
-		JLabel lblNewLabel_1_1_1 = new JLabel("750");
+		JLabel lblNewLabel_1_1_1 = new JLabel("4,500");
 		lblNewLabel_1_1_1.setBackground(new Color(255, 255, 255));
 		lblNewLabel_1_1_1.setBorder(new MatteBorder(2, 2, 2, 2, (Color) new Color(255, 255, 255)));
 		lblNewLabel_1_1_1.setIcon(new ImageIcon("C:\\Users\\Ernest\\eclipse-workspace\\SecondSemester\\img\\icons8-robux-24.png"));
@@ -107,14 +107,14 @@ public class menu_1 extends JFrame {
 		panel_1.setBounds(64, 205, 723, 7);
 		contentPane.add(panel_1);
 		
-		JLabel lblNewLabel_1_1_3 = new JLabel("PHP 999.00");
+		JLabel lblNewLabel_1_1_3 = new JLabel("PHP 2,749.00");
 		lblNewLabel_1_1_3.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1_1_3.setForeground(Color.WHITE);
 		lblNewLabel_1_1_3.setFont(new Font("Leelawadee UI", Font.BOLD, 20));
-		lblNewLabel_1_1_3.setBounds(80, 234, 119, 49);
+		lblNewLabel_1_1_3.setBounds(80, 234, 126, 49);
 		contentPane.add(lblNewLabel_1_1_3);
 		
-		JLabel lblNewLabel_1_1_1_1 = new JLabel("1,200");
+		JLabel lblNewLabel_1_1_1_1 = new JLabel("4,850");
 		lblNewLabel_1_1_1_1.setIcon(new ImageIcon("C:\\Users\\Ernest\\eclipse-workspace\\SecondSemester\\img\\icons8-robux-24.png"));
 		lblNewLabel_1_1_1_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1_1_1_1.setForeground(Color.WHITE);
@@ -124,8 +124,8 @@ public class menu_1 extends JFrame {
 		lblNewLabel_1_1_1_1.setBounds(320, 234, 119, 49);
 		contentPane.add(lblNewLabel_1_1_1_1);
 		
-		JLabel lblNewLabel_1_1_2_1 = new JLabel("1,600/month");
-		lblNewLabel_1_1_2_1.setIcon(new ImageIcon("C:\\Users\\Ernest\\eclipse-workspace\\SecondSemester\\img\\icons8-robuxwhite-24.png"));
+		JLabel lblNewLabel_1_1_2_1 = new JLabel("N/A");
+		lblNewLabel_1_1_2_1.setIcon(null);
 		lblNewLabel_1_1_2_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1_1_2_1.setForeground(Color.WHITE);
 		lblNewLabel_1_1_2_1.setFont(new Font("Leelawadee UI", Font.BOLD, 20));
@@ -139,14 +139,14 @@ public class menu_1 extends JFrame {
 		panel_1_1.setBounds(64, 294, 723, 7);
 		contentPane.add(panel_1_1);
 		
-		JLabel lblNewLabel_1_1_3_1 = new JLabel("PHP 1,299.00");
+		JLabel lblNewLabel_1_1_3_1 = new JLabel("PHP 2,999.00\r\n");
 		lblNewLabel_1_1_3_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1_1_3_1.setForeground(Color.WHITE);
 		lblNewLabel_1_1_3_1.setFont(new Font("Leelawadee UI", Font.BOLD, 20));
 		lblNewLabel_1_1_3_1.setBounds(80, 323, 126, 49);
 		contentPane.add(lblNewLabel_1_1_3_1);
 		
-		JLabel lblNewLabel_1_1_1_1_1 = new JLabel("1,500");
+		JLabel lblNewLabel_1_1_1_1_1 = new JLabel("5,100");
 		lblNewLabel_1_1_1_1_1.setIcon(new ImageIcon("C:\\Users\\Ernest\\eclipse-workspace\\SecondSemester\\img\\icons8-robux-24.png"));
 		lblNewLabel_1_1_1_1_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1_1_1_1_1.setForeground(Color.WHITE);
@@ -171,14 +171,14 @@ public class menu_1 extends JFrame {
 		panel_1_1_1.setBounds(64, 383, 723, 7);
 		contentPane.add(panel_1_1_1);
 		
-		JLabel lblNewLabel_1_1_3_1_1 = new JLabel("PHP 1,699.00");
+		JLabel lblNewLabel_1_1_3_1_1 = new JLabel("PHP 3,249.00");
 		lblNewLabel_1_1_3_1_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1_1_3_1_1.setForeground(Color.WHITE);
 		lblNewLabel_1_1_3_1_1.setFont(new Font("Leelawadee UI", Font.BOLD, 20));
 		lblNewLabel_1_1_3_1_1.setBounds(80, 412, 126, 49);
 		contentPane.add(lblNewLabel_1_1_3_1_1);
 		
-		JLabel lblNewLabel_1_1_1_1_1_1 = new JLabel("2,000");
+		JLabel lblNewLabel_1_1_1_1_1_1 = new JLabel("5,500");
 		lblNewLabel_1_1_1_1_1_1.setIcon(new ImageIcon("C:\\Users\\Ernest\\eclipse-workspace\\SecondSemester\\img\\icons8-robux-24.png"));
 		lblNewLabel_1_1_1_1_1_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1_1_1_1_1_1.setForeground(Color.WHITE);
@@ -203,14 +203,14 @@ public class menu_1 extends JFrame {
 		panel_1_1_1_1.setBounds(64, 472, 723, 7);
 		contentPane.add(panel_1_1_1_1);
 		
-		JLabel lblNewLabel_1_1_3_1_1_1 = new JLabel("PHP 1,999.00");
+		JLabel lblNewLabel_1_1_3_1_1_1 = new JLabel("PHP 3,749.00");
 		lblNewLabel_1_1_3_1_1_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1_1_3_1_1_1.setForeground(Color.WHITE);
 		lblNewLabel_1_1_3_1_1_1.setFont(new Font("Leelawadee UI", Font.BOLD, 20));
 		lblNewLabel_1_1_3_1_1_1.setBounds(80, 501, 126, 49);
 		contentPane.add(lblNewLabel_1_1_3_1_1_1);
 		
-		JLabel lblNewLabel_1_1_1_1_1_1_1 = new JLabel("2,500");
+		JLabel lblNewLabel_1_1_1_1_1_1_1 = new JLabel("6,000");
 		lblNewLabel_1_1_1_1_1_1_1.setIcon(new ImageIcon("C:\\Users\\Ernest\\eclipse-workspace\\SecondSemester\\img\\icons8-robux-24.png"));
 		lblNewLabel_1_1_1_1_1_1_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1_1_1_1_1_1_1.setForeground(Color.WHITE);

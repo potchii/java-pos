@@ -92,9 +92,10 @@ public class login extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				String userName = txtEmail.getText();
 				String password = passwordField.getText(); // this gives a warning but it works
-				if(userName.contains("Admin") && password.contains("Admin123")) {
+				if(userName.contains("admin") && password.contains("Admin123")) { // to-do : add more users, atleast 2
 				menu main = new menu();
 				main.setVisible(true);
+				JOptionPane.showMessageDialog(contentPane, "Logged in as Admin.", "Login Authenticated", JOptionPane.PLAIN_MESSAGE);
 				}
 				else {
 					JOptionPane.showMessageDialog(contentPane, "Invalid details", "Error", JOptionPane.ERROR_MESSAGE);

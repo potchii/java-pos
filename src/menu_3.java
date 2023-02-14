@@ -14,6 +14,8 @@ import java.awt.ComponentOrientation;
 import javax.swing.JButton;
 import java.awt.Toolkit;
 import javax.swing.JComboBox;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class menu_3 extends JFrame {
 
@@ -191,5 +193,15 @@ public class menu_3 extends JFrame {
 		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Ernest\\eclipse-workspace\\SecondSemester\\img\\icons8-roblox-48.png"));
 		lblNewLabel.setBounds(351, 401, 57, 49);
 		contentPane.add(lblNewLabel);
+		
+		JButton btnNewButton = new JButton("Previous");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				menu_2 main = new menu_2();
+				main.setVisible(true);
+			}
+		});
+		btnNewButton.setBounds(698, 415, 89, 23);
+		contentPane.add(btnNewButton);
 	}
 }

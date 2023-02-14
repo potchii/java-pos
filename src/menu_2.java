@@ -14,6 +14,8 @@ import java.awt.ComponentOrientation;
 import javax.swing.JButton;
 import java.awt.Toolkit;
 import javax.swing.JComboBox;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class menu_2 extends JFrame {
 
@@ -269,10 +271,22 @@ public class menu_2 extends JFrame {
 		contentPane.add(lblNewLabel_1_1_2_1_2);
 		
 		JButton btnNewButton = new JButton("Next");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				menu_3 main = new menu_3();
+				main.setVisible(true);
+			}
+		});
 		btnNewButton.setBounds(698, 672, 89, 23);
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Previous");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				menu_2 main = new menu_2();
+				main.setVisible(true);
+			}
+		});
 		btnNewButton_1.setBounds(599, 672, 89, 23);
 		contentPane.add(btnNewButton_1);
 	}

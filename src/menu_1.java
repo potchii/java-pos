@@ -14,6 +14,8 @@ import java.awt.ComponentOrientation;
 import javax.swing.JButton;
 import java.awt.Toolkit;
 import javax.swing.JComboBox;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class menu_1 extends JFrame {
 
@@ -57,12 +59,12 @@ public class menu_1 extends JFrame {
 		panel.setBounds(64, 116, 723, 7);
 		contentPane.add(panel);
 		
-		JLabel lblNewLabel_1_1 = new JLabel("PHP 699.00");
-		lblNewLabel_1_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1_1.setForeground(Color.WHITE);
-		lblNewLabel_1_1.setFont(new Font("Leelawadee UI", Font.BOLD, 20));
-		lblNewLabel_1_1.setBounds(80, 145, 119, 49);
-		contentPane.add(lblNewLabel_1_1);
+		JLabel lblNewLabel699 = new JLabel("PHP 699.00");
+		lblNewLabel699.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel699.setForeground(Color.WHITE);
+		lblNewLabel699.setFont(new Font("Leelawadee UI", Font.BOLD, 20));
+		lblNewLabel699.setBounds(80, 145, 119, 49);
+		contentPane.add(lblNewLabel699);
 		
 		JLabel lblNewLabel_1_1_1 = new JLabel("750");
 		lblNewLabel_1_1_1.setBackground(new Color(255, 255, 255));
@@ -267,5 +269,25 @@ public class menu_1 extends JFrame {
 		lblNewLabel_1_1_2_1_2.setFont(new Font("Leelawadee UI", Font.BOLD, 20));
 		lblNewLabel_1_1_2_1_2.setBounds(576, 590, 157, 49);
 		contentPane.add(lblNewLabel_1_1_2_1_2);
+		
+		JButton btnNewButton = new JButton("Next");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				menu_2 main = new menu_2();
+				main.setVisible(true);
+			}
+		});
+		btnNewButton.setBounds(696, 677, 89, 23);
+		contentPane.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("Previous\r\n");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				menu main = new menu();
+				main.setVisible(true);
+			}
+		});
+		btnNewButton_1.setBounds(597, 677, 89, 23);
+		contentPane.add(btnNewButton_1);
 	}
 }

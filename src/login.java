@@ -5,6 +5,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Color;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
@@ -17,6 +19,8 @@ import javax.swing.JPasswordField;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.Toolkit;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class login extends JFrame {
 
@@ -84,6 +88,19 @@ public class login extends JFrame {
 		contentPane.add(lblNewLabel_2);
 		
 		JButton btnNewButton = new JButton("Login");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String userName = txtEmail.getText();
+				String password = passwordField.getText(); // this gives a warning but it works
+				if(userName.contains("Admin") && password.contains("Admin123")) {
+				menu main = new menu();
+				main.setVisible(true);
+				}
+				else {
+					JOptionPane.showMessageDialog(contentPane, "Invalid details", "Error", JOptionPane.ERROR_MESSAGE);
+				}
+ 			}
+		});
 		btnNewButton.setHorizontalTextPosition(SwingConstants.CENTER);
 		btnNewButton.setFont(new Font("Segoe UI", Font.BOLD, 14));
 		btnNewButton.setForeground(new Color(255, 255, 255));

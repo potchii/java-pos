@@ -14,6 +14,8 @@ import java.awt.ComponentOrientation;
 import javax.swing.JButton;
 import java.awt.Toolkit;
 import javax.swing.JComboBox;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class menu extends JFrame {
 
@@ -57,22 +59,22 @@ public class menu extends JFrame {
 		panel.setBounds(64, 116, 723, 7);
 		contentPane.add(panel);
 		
-		JLabel lblNewLabel_1_1 = new JLabel("PHP 49.00");
-		lblNewLabel_1_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1_1.setForeground(Color.WHITE);
-		lblNewLabel_1_1.setFont(new Font("Leelawadee UI", Font.BOLD, 20));
-		lblNewLabel_1_1.setBounds(80, 145, 119, 49);
-		contentPane.add(lblNewLabel_1_1);
+		JLabel lblNewLabel49 = new JLabel("PHP 49.00");
+		lblNewLabel49.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel49.setForeground(Color.WHITE);
+		lblNewLabel49.setFont(new Font("Leelawadee UI", Font.BOLD, 20));
+		lblNewLabel49.setBounds(80, 145, 119, 49);
+		contentPane.add(lblNewLabel49);
 		
-		JLabel lblNewLabel_1_1_1 = new JLabel("100");
-		lblNewLabel_1_1_1.setBackground(new Color(255, 255, 255));
-		lblNewLabel_1_1_1.setBorder(new MatteBorder(2, 2, 2, 2, (Color) new Color(255, 255, 255)));
-		lblNewLabel_1_1_1.setIcon(new ImageIcon("C:\\Users\\Ernest\\eclipse-workspace\\SecondSemester\\img\\icons8-robux-24.png"));
-		lblNewLabel_1_1_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1_1_1.setForeground(Color.WHITE);
-		lblNewLabel_1_1_1.setFont(new Font("Leelawadee UI", Font.BOLD, 20));
-		lblNewLabel_1_1_1.setBounds(320, 145, 119, 49);
-		contentPane.add(lblNewLabel_1_1_1);
+		JLabel lblNewLabel100r = new JLabel("100");
+		lblNewLabel100r.setBackground(new Color(255, 255, 255));
+		lblNewLabel100r.setBorder(new MatteBorder(2, 2, 2, 2, (Color) new Color(255, 255, 255)));
+		lblNewLabel100r.setIcon(new ImageIcon("C:\\Users\\Ernest\\eclipse-workspace\\SecondSemester\\img\\icons8-robux-24.png"));
+		lblNewLabel100r.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel100r.setForeground(Color.WHITE);
+		lblNewLabel100r.setFont(new Font("Leelawadee UI", Font.BOLD, 20));
+		lblNewLabel100r.setBounds(320, 145, 119, 49);
+		contentPane.add(lblNewLabel100r);
 		
 		JLabel lblNewLabel_1_2 = new JLabel("Robux Packages");
 		lblNewLabel_1_2.setHorizontalTextPosition(SwingConstants.LEFT);
@@ -267,5 +269,15 @@ public class menu extends JFrame {
 		lblNewLabel_1_1_2_1_2.setFont(new Font("Leelawadee UI", Font.BOLD, 20));
 		lblNewLabel_1_1_2_1_2.setBounds(576, 590, 157, 49);
 		contentPane.add(lblNewLabel_1_1_2_1_2);
+		
+		JButton btnNewButton = new JButton("Next");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				menu_1 main = new menu_1();
+				main.setVisible(true);
+			}
+		});
+		btnNewButton.setBounds(698, 683, 89, 23);
+		contentPane.add(btnNewButton);
 	}
 }

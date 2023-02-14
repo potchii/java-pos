@@ -267,5 +267,13 @@ public class menu_2 extends JFrame {
 		lblNewLabel_1_1_2_1_2.setFont(new Font("Leelawadee UI", Font.BOLD, 20));
 		lblNewLabel_1_1_2_1_2.setBounds(576, 590, 157, 49);
 		contentPane.add(lblNewLabel_1_1_2_1_2);
+		
+		JButton btnNewButton = new JButton("Next");
+		btnNewButton.setBounds(698, 672, 89, 23);
+		contentPane.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("Previous");
+		btnNewButton_1.setBounds(599, 672, 89, 23);
+		contentPane.add(btnNewButton_1);
 	}
 }

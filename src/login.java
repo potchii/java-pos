@@ -76,7 +76,7 @@ public class login extends JFrame {
 		
 		txtEmail = new JTextField();
 		txtEmail.setMargin(new Insets(2, 4, 2, 2));
-		txtEmail.setText("Email");
+		txtEmail.setText("Username");
 		txtEmail.setForeground(new Color(192, 192, 192));
 		txtEmail.setBounds(23, 210, 147, 20);
 		contentPane.add(txtEmail);
@@ -96,6 +96,16 @@ public class login extends JFrame {
 				menu main = new menu();
 				main.setVisible(true);
 				JOptionPane.showMessageDialog(contentPane, "Logged in as Admin.", "Login Authenticated", JOptionPane.PLAIN_MESSAGE);
+				}
+				else if (userName.contains("user") && password.contains("1234")) {
+					menu main = new menu();
+					main.setVisible(true);
+					JOptionPane.showMessageDialog(contentPane, "Logged in as Admin.", "Login Authenticated", JOptionPane.PLAIN_MESSAGE);
+				}
+				else if (userName.contains("Admin") && password.contains("123456789")) {
+					menu main = new menu();
+					main.setVisible(true);
+					JOptionPane.showMessageDialog(contentPane, "Logged in as Admin.", "Login Authenticated", JOptionPane.PLAIN_MESSAGE);
 				}
 				else {
 					JOptionPane.showMessageDialog(contentPane, "Invalid details", "Error", JOptionPane.ERROR_MESSAGE);

@@ -270,14 +270,19 @@ public class menu extends JFrame {
 		lblNewLabel_1_1_2_1_2.setBounds(576, 590, 157, 49);
 		contentPane.add(lblNewLabel_1_1_2_1_2);
 		
-		JButton btnNewButton = new JButton("Next");
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton btnIdentify_1 = new JButton(">");
+		btnIdentify_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				menu_1 main = new menu_1();
 				main.setVisible(true);
 			}
 		});
-		btnNewButton.setBounds(698, 683, 89, 23);
-		contentPane.add(btnNewButton);
+		btnIdentify_1.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnIdentify_1.setForeground(Color.WHITE);
+		btnIdentify_1.setFont(new Font("Segoe UI", Font.BOLD, 14));
+		btnIdentify_1.setBorder(null);
+		btnIdentify_1.setBackground(Color.RED);
+		btnIdentify_1.setBounds(737, 650, 44, 31);
+		contentPane.add(btnIdentify_1);
 	}
 }

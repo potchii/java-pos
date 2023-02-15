@@ -5,13 +5,18 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Color;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
+
 import java.awt.Font;
 import javax.swing.SwingConstants;
 import javax.swing.border.MatteBorder;
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class billing_1 extends JFrame {
 
@@ -38,6 +43,9 @@ public class billing_1 extends JFrame {
 	private JTextField textField_19;
 	private JTextField textField_20;
 	private JTextField textField_21;
+	private JTextField textField_22;
+	private JTextField textField_24;
+	private JTextField textField_23;
 
 	/**
 	 * Launch the application.
@@ -86,11 +94,31 @@ public class billing_1 extends JFrame {
 		contentPane.add(textField);
 		
 		textField_1 = new JTextField();
+		textField_1.setEditable(false);
 		textField_1.setColumns(10);
 		textField_1.setBounds(113, 42, 86, 20);
 		contentPane.add(textField_1);
 		
 		JButton btnIdentify = new JButton("Identify");
+		btnIdentify.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String customer[] = {"Princess Zamora", "Victor Balalong", "Skerdi Manalo"};
+				
+				switch (textField.getText()) {
+				
+				case "101":
+					textField_1.setText(customer[0]);
+					break;
+				case "102":
+					textField_1.setText(customer[1]);
+					break;
+				case "103":
+					textField_1.setText(customer[2]);
+				default:
+					JOptionPane.showMessageDialog(contentPane, "Invalid User ID!", "Error", JOptionPane.ERROR_MESSAGE);
+				}
+			}
+		});
 		btnIdentify.setHorizontalTextPosition(SwingConstants.CENTER);
 		btnIdentify.setForeground(Color.WHITE);
 		btnIdentify.setFont(new Font("Segoe UI", Font.BOLD, 14));
@@ -99,11 +127,11 @@ public class billing_1 extends JFrame {
 		btnIdentify.setBounds(209, 11, 89, 51);
 		contentPane.add(btnIdentify);
 		
-		JLabel lblShoppingCart = new JLabel("SHOPPING CART");
+		JLabel lblShoppingCart = new JLabel("CHECKOUT");
 		lblShoppingCart.setIcon(new ImageIcon("C:\\Users\\Ernest\\eclipse-workspace\\SecondSemester\\img\\icons8-roblox-48.png"));
 		lblShoppingCart.setForeground(Color.WHITE);
 		lblShoppingCart.setFont(new Font("Segoe UI", Font.BOLD, 20));
-		lblShoppingCart.setBounds(555, 53, 222, 51);
+		lblShoppingCart.setBounds(616, 53, 222, 51);
 		contentPane.add(lblShoppingCart);
 		
 		JLabel lblCustomerName_1 = new JLabel("Time");
@@ -165,6 +193,7 @@ public class billing_1 extends JFrame {
 		contentPane.add(textField_2);
 		
 		textField_3 = new JTextField();
+		textField_3.setEditable(false);
 		textField_3.setColumns(10);
 		textField_3.setBounds(705, 158, 60, 20);
 		contentPane.add(textField_3);
@@ -191,6 +220,7 @@ public class billing_1 extends JFrame {
 		contentPane.add(textField_4);
 		
 		textField_5 = new JTextField();
+		textField_5.setEditable(false);
 		textField_5.setColumns(10);
 		textField_5.setBounds(705, 200, 60, 20);
 		contentPane.add(textField_5);
@@ -217,6 +247,7 @@ public class billing_1 extends JFrame {
 		contentPane.add(textField_6);
 		
 		textField_7 = new JTextField();
+		textField_7.setEditable(false);
 		textField_7.setColumns(10);
 		textField_7.setBounds(705, 242, 60, 20);
 		contentPane.add(textField_7);
@@ -243,6 +274,7 @@ public class billing_1 extends JFrame {
 		contentPane.add(textField_8);
 		
 		textField_9 = new JTextField();
+		textField_9.setEditable(false);
 		textField_9.setColumns(10);
 		textField_9.setBounds(705, 284, 60, 20);
 		contentPane.add(textField_9);
@@ -269,6 +301,7 @@ public class billing_1 extends JFrame {
 		contentPane.add(textField_10);
 		
 		textField_11 = new JTextField();
+		textField_11.setEditable(false);
 		textField_11.setColumns(10);
 		textField_11.setBounds(705, 326, 60, 20);
 		contentPane.add(textField_11);
@@ -295,6 +328,7 @@ public class billing_1 extends JFrame {
 		contentPane.add(textField_12);
 		
 		textField_13 = new JTextField();
+		textField_13.setEditable(false);
 		textField_13.setColumns(10);
 		textField_13.setBounds(705, 368, 60, 20);
 		contentPane.add(textField_13);
@@ -321,6 +355,7 @@ public class billing_1 extends JFrame {
 		contentPane.add(textField_14);
 		
 		textField_15 = new JTextField();
+		textField_15.setEditable(false);
 		textField_15.setColumns(10);
 		textField_15.setBounds(705, 410, 60, 20);
 		contentPane.add(textField_15);
@@ -347,6 +382,7 @@ public class billing_1 extends JFrame {
 		contentPane.add(textField_16);
 		
 		textField_17 = new JTextField();
+		textField_17.setEditable(false);
 		textField_17.setColumns(10);
 		textField_17.setBounds(705, 452, 60, 20);
 		contentPane.add(textField_17);
@@ -373,6 +409,7 @@ public class billing_1 extends JFrame {
 		contentPane.add(textField_18);
 		
 		textField_19 = new JTextField();
+		textField_19.setEditable(false);
 		textField_19.setColumns(10);
 		textField_19.setBounds(705, 494, 60, 20);
 		contentPane.add(textField_19);
@@ -399,11 +436,18 @@ public class billing_1 extends JFrame {
 		contentPane.add(textField_20);
 		
 		textField_21 = new JTextField();
+		textField_21.setEditable(false);
 		textField_21.setColumns(10);
 		textField_21.setBounds(705, 536, 60, 20);
 		contentPane.add(textField_21);
 		
 		JButton btnIdentify_1_1 = new JButton("<");
+		btnIdentify_1_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				billing main = new billing();
+				main.setVisible(true);
+			}
+		});
 		btnIdentify_1_1.setHorizontalTextPosition(SwingConstants.CENTER);
 		btnIdentify_1_1.setForeground(Color.WHITE);
 		btnIdentify_1_1.setFont(new Font("Segoe UI", Font.BOLD, 14));
@@ -413,6 +457,11 @@ public class billing_1 extends JFrame {
 		contentPane.add(btnIdentify_1_1);
 		
 		JButton btnIdentify_1 = new JButton(">");
+		btnIdentify_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(contentPane, "You are in the last page. You may not browse any further.", "ERROR", JOptionPane.ERROR_MESSAGE);
+			}
+		});
 		btnIdentify_1.setHorizontalTextPosition(SwingConstants.CENTER);
 		btnIdentify_1.setForeground(Color.WHITE);
 		btnIdentify_1.setFont(new Font("Segoe UI", Font.BOLD, 14));
@@ -449,6 +498,195 @@ public class billing_1 extends JFrame {
 		lblNewLabel_3_1.setFont(new Font("Segoe UI", Font.PLAIN, 12));
 		lblNewLabel_3_1.setBounds(263, 696, 331, 35);
 		contentPane.add(lblNewLabel_3_1);
-	}
+		
+		JCheckBox[] checkboxes = new JCheckBox[10]; // create an array of 10 checkboxes
 
+		checkboxes[0] = new JCheckBox("");
+		checkboxes[0].setBackground(new Color(23, 25, 30));
+		checkboxes[0].setBounds(23, 144, 20, 31);
+		contentPane.add(checkboxes[0]);
+
+		checkboxes[1] = new JCheckBox("");
+		checkboxes[1].setBackground(new Color(23, 25, 30));
+		checkboxes[1].setBounds(22, 193, 20, 31);
+		contentPane.add(checkboxes[1]);
+
+		checkboxes[2] = new JCheckBox("");
+		checkboxes[2].setBackground(new Color(23, 25, 30));
+		checkboxes[2].setBounds(23, 235, 20, 31);
+		contentPane.add(checkboxes[2]);
+
+		checkboxes[3] = new JCheckBox("");
+		checkboxes[3].setBackground(new Color(23, 25, 30));
+		checkboxes[3].setBounds(22, 270, 20, 31);
+		contentPane.add(checkboxes[3]);
+
+		checkboxes[4] = new JCheckBox("");
+		checkboxes[4].setBackground(new Color(23, 25, 30));
+		checkboxes[4].setBounds(22, 312, 20, 31);
+		contentPane.add(checkboxes[4]);
+
+		checkboxes[5] = new JCheckBox("");
+		checkboxes[5].setBackground(new Color(23, 25, 30));
+		checkboxes[5].setBounds(23, 354, 20, 31);
+		contentPane.add(checkboxes[5]);
+
+		checkboxes[6] = new JCheckBox("");
+		checkboxes[6].setBackground(new Color(23, 25, 30));
+		checkboxes[6].setBounds(23, 396, 20, 31);
+		contentPane.add(checkboxes[6]);
+
+		checkboxes[7] = new JCheckBox("");
+		checkboxes[7].setBackground(new Color(23, 25, 30));
+		checkboxes[7].setBounds(23, 438, 20, 31);
+		contentPane.add(checkboxes[7]);
+
+		checkboxes[8] = new JCheckBox("");
+		checkboxes[8].setBackground(new Color(23, 25, 30));
+		checkboxes[8].setBounds(23, 480, 20, 31);
+		contentPane.add(checkboxes[8]);
+
+		checkboxes[9] = new JCheckBox("");
+		checkboxes[9].setBackground(new Color(23, 25, 30));
+		checkboxes[9].setBounds(23, 516, 20, 31);
+		contentPane.add(checkboxes[9]);
+		
+		JLabel lblTotal = new JLabel("COST");
+		lblTotal.setFont(new Font("Leelawadee UI", Font.BOLD, 14));
+		lblTotal.setForeground(Color.WHITE);
+		lblTotal.setBounds(482, 598, 44, 14);
+		contentPane.add(lblTotal);
+		
+		textField_22 = new JTextField();
+		textField_22.setEditable(false);
+		textField_22.setColumns(10);
+		textField_22.setBounds(534, 597, 98, 20);
+		contentPane.add(textField_22);
+		
+		JLabel lblTotal_1_1 = new JLabel("TAX");
+		lblTotal_1_1.setForeground(Color.WHITE);
+		lblTotal_1_1.setFont(new Font("Leelawadee UI", Font.BOLD, 14));
+		lblTotal_1_1.setBounds(482, 624, 44, 14);
+		contentPane.add(lblTotal_1_1);
+		
+		textField_24 = new JTextField();
+		textField_24.setEditable(false);
+		textField_24.setColumns(10);
+		textField_24.setBounds(534, 623, 98, 20);
+		contentPane.add(textField_24);
+		
+		JLabel lblTotal_1_1_1 = new JLabel("TOTAL COST");
+		lblTotal_1_1_1.setForeground(Color.WHITE);
+		lblTotal_1_1_1.setFont(new Font("Leelawadee UI", Font.BOLD, 14));
+		lblTotal_1_1_1.setBounds(440, 648, 86, 14);
+		contentPane.add(lblTotal_1_1_1);
+		
+		textField_23 = new JTextField();
+		textField_23.setEditable(false);
+		textField_23.setColumns(10);
+		textField_23.setBounds(534, 647, 98, 20);
+		contentPane.add(textField_23);
+		
+		
+		JButton btnCompute = new JButton("Compute");
+		btnCompute.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int[] quantity = new int[10];
+				double[] answer = new double[10]; // subtotal
+				double itemPrice = 1999.00;
+				double totalCost1= 0;
+				String itemList = "";
+
+				if (checkboxes[0].isSelected()) { // checkboxes[] = 1st 10 checkboxes, checkboxes1[] = 2nd 10 checkboxes
+					quantity[0] = Integer.parseInt(textField_2.getText());
+					answer[0] = quantity[0] * itemPrice;
+					textField_3.setText(Double.toString(answer[0]));
+				}
+				if (checkboxes[1].isSelected()) {
+					quantity[1] = Integer.parseInt(textField_4.getText());
+					answer[1] = quantity[1] * 2149.00;
+					textField_5.setText(Double.toString(answer[1]));
+				}
+				if (checkboxes[2].isSelected()) {
+					quantity[2] = Integer.parseInt(textField_6.getText());
+					answer[2] = quantity[2] * 2490.00;
+					textField_7.setText(Double.toString(answer[2]));
+				}
+				if (checkboxes[3].isSelected()) {
+					quantity[3] = Integer.parseInt(textField_8.getText());
+					answer[3] = quantity[3] * 2749.00;
+					textField_9.setText(Double.toString(answer[3]));
+				}
+				if (checkboxes[4].isSelected()) {
+					quantity[4] = Integer.parseInt(textField_10.getText());
+					answer[4] = quantity[4] * 2999.00;
+					textField_11.setText(Double.toString(answer[4]));
+				}
+				if (checkboxes[5].isSelected()) {
+					quantity[5] = Integer.parseInt(textField_12.getText());
+					answer[5] = quantity[5] * 3249.00;
+					textField_13.setText(Double.toString(answer[5]));
+				}
+				if (checkboxes[6].isSelected()) {
+					quantity[6] = Integer.parseInt(textField_14.getText());
+					answer[6] = quantity[6] * 3749.00;
+					textField_15.setText(Double.toString(answer[6]));
+				}
+				if (checkboxes[7].isSelected()) {
+					quantity[7] = Integer.parseInt(textField_16.getText());
+					answer[7] = quantity[7] * 3999.00;
+					textField_17.setText(Double.toString(answer[7]));
+				}
+				if (checkboxes[8].isSelected()) {
+					quantity[8] = Integer.parseInt(textField_18.getText());
+					answer[8] = quantity[8] * 4990.00;
+					textField_19.setText(Double.toString(answer[8]));
+				}
+				if (checkboxes[9].isSelected()) {
+					quantity[9] = Integer.parseInt(textField_20.getText());
+					answer[9] = quantity[9] * 9990.00;
+					textField_21.setText(Double.toString(answer[9]));
+				}
+				
+
+				// COST COMPUTATION
+				double total = 0.0;
+				for (int i = 0; i < answer.length; i++) {
+				    total += answer[i];
+				}
+				textField_22.setText(Double.toString(total));
+				
+				// TAX COMPUTATION
+				double tax = total * .12; // 12% tax
+				textField_24.setText(Double.toString(tax));
+				
+				// TOTAL COST COMCPUTATION
+				double totalCost = total + tax;
+				textField_23.setText(Double.toString(totalCost));
+				
+				if (textField_22.getText().equals("0.0") && textField_24.getText().equals("0.0") && textField_23.getText().equals("0.0")) {
+				    JOptionPane.showMessageDialog(contentPane, "Please purchase item(s) to proceed!", "Error", JOptionPane.ERROR_MESSAGE);
+				}
+				
+				
+				
+			}
+		});
+		btnCompute.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnCompute.setForeground(Color.WHITE);
+		btnCompute.setFont(new Font("Segoe UI", Font.BOLD, 14));
+		btnCompute.setBorder(null);
+		btnCompute.setBackground(Color.RED);
+		btnCompute.setBounds(534, 678, 98, 20);
+		contentPane.add(btnCompute);
+		
+		JButton btnReceipt = new JButton("Receipt");
+		btnReceipt.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnReceipt.setForeground(Color.WHITE);
+		btnReceipt.setFont(new Font("Segoe UI", Font.BOLD, 14));
+		btnReceipt.setBorder(null);
+		btnReceipt.setBackground(Color.RED);
+		btnReceipt.setBounds(534, 703, 98, 20);
+		contentPane.add(btnReceipt);
+	}
 }

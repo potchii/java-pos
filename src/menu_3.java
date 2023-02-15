@@ -5,6 +5,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Color;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
 import java.awt.Font;
@@ -194,14 +195,34 @@ public class menu_3 extends JFrame {
 		lblNewLabel.setBounds(351, 401, 57, 49);
 		contentPane.add(lblNewLabel);
 		
-		JButton btnNewButton = new JButton("Previous");
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton btnIdentify_1_1 = new JButton("<");
+		btnIdentify_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				menu_2 main = new menu_2();
 				main.setVisible(true);
 			}
 		});
-		btnNewButton.setBounds(698, 415, 89, 23);
-		contentPane.add(btnNewButton);
+		btnIdentify_1_1.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnIdentify_1_1.setForeground(Color.WHITE);
+		btnIdentify_1_1.setFont(new Font("Segoe UI", Font.BOLD, 14));
+		btnIdentify_1_1.setBorder(null);
+		btnIdentify_1_1.setBackground(Color.RED);
+		btnIdentify_1_1.setBounds(689, 419, 44, 31);
+		contentPane.add(btnIdentify_1_1);
+		
+		JButton btnIdentify_1 = new JButton(">");
+		btnIdentify_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				billing main = new billing();
+				main.setVisible(true);
+			}
+		});
+		btnIdentify_1.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnIdentify_1.setForeground(Color.WHITE);
+		btnIdentify_1.setFont(new Font("Segoe UI", Font.BOLD, 14));
+		btnIdentify_1.setBorder(null);
+		btnIdentify_1.setBackground(Color.RED);
+		btnIdentify_1.setBounds(743, 419, 44, 31);
+		contentPane.add(btnIdentify_1);
 	}
 }

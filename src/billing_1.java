@@ -17,6 +17,8 @@ import java.awt.Toolkit;
 import javax.swing.ImageIcon;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public class billing_1 extends JFrame {
 
@@ -46,6 +48,33 @@ public class billing_1 extends JFrame {
 	private JTextField textField_22;
 	private JTextField textField_24;
 	private JTextField textField_23;
+	
+	public void Clock(JLabel lblNewLabel_1, JLabel lblCustomerName_1) {
+	    Thread clock = new Thread() {
+	        public void run() {
+	            try {
+	                for (;;) {
+	                    Calendar der = new GregorianCalendar();
+	                    int day = der.get(Calendar.DAY_OF_MONTH);
+	                    int month = der.get(Calendar.MONTH);
+	                    int year = der.get(Calendar.YEAR);
+
+	                    int sec = der.get(Calendar.SECOND);
+	                    int min = der.get(Calendar.MINUTE);
+	                    int hr = der.get(Calendar.HOUR);
+
+	                    lblNewLabel_1.setText("Date: " + (month + 1) + '/' + day + '/' + year);
+	                    lblCustomerName_1.setText("Time: " + hr + ':' + min + ':' + sec);
+
+	                    sleep(1000);
+	                }
+	            } catch (InterruptedException e) {
+	                e.printStackTrace();
+	            }
+	        }
+	    };
+	    clock.start();
+	}
 
 	/**
 	 * Launch the application.
@@ -62,11 +91,14 @@ public class billing_1 extends JFrame {
 			}
 		});
 	}
+	
 
 	/**
 	 * Create the frame.
 	 */
 	public billing_1() {
+		//String[] items = {"2,500 Robux", "2,750 Robux", "4,500 Robux", "4,850 Robux", "5,100 Robux", "5,500 Robux", "6,000 Robux", "6,350 Robux", "10,000 Robux", "22,500 Robux"};
+		
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Ernest\\eclipse-workspace\\SecondSemester\\img\\icons8-roblox-48.png"));
 		setTitle("Roblox - Shopping Cart");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -114,6 +146,7 @@ public class billing_1 extends JFrame {
 					break;
 				case "103":
 					textField_1.setText(customer[2]);
+					break;
 				default:
 					JOptionPane.showMessageDialog(contentPane, "Invalid User ID!", "Error", JOptionPane.ERROR_MESSAGE);
 				}
@@ -136,14 +169,16 @@ public class billing_1 extends JFrame {
 		
 		JLabel lblCustomerName_1 = new JLabel("Time");
 		lblCustomerName_1.setForeground(Color.WHITE);
-		lblCustomerName_1.setBounds(717, 45, 27, 14);
+		lblCustomerName_1.setBounds(663, 45, 102, 14);
 		contentPane.add(lblCustomerName_1);
 		
 		JLabel lblNewLabel_1 = new JLabel("Date");
 		lblNewLabel_1.setForeground(Color.WHITE);
-		lblNewLabel_1.setBounds(717, 17, 60, 14);
+		lblNewLabel_1.setBounds(663, 17, 102, 14);
 		contentPane.add(lblNewLabel_1);
 		
+		Clock(lblNewLabel_1, lblCustomerName_1);
+			
 		JLabel lblNewLabel_2 = new JLabel("Items");
 		lblNewLabel_2.setForeground(Color.WHITE);
 		lblNewLabel_2.setBounds(54, 114, 60, 14);
@@ -593,13 +628,13 @@ public class billing_1 extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				int[] quantity = new int[10];
 				double[] answer = new double[10]; // subtotal
-				double itemPrice = 1999.00;
 				double totalCost1= 0;
 				String itemList = "";
+				String[] item = new String[10];
 
 				if (checkboxes[0].isSelected()) { // checkboxes[] = 1st 10 checkboxes, checkboxes1[] = 2nd 10 checkboxes
 					quantity[0] = Integer.parseInt(textField_2.getText());
-					answer[0] = quantity[0] * itemPrice;
+					answer[0] = quantity[0] * 1999.00;
 					textField_3.setText(Double.toString(answer[0]));
 				}
 				if (checkboxes[1].isSelected()) {
@@ -668,8 +703,6 @@ public class billing_1 extends JFrame {
 				    JOptionPane.showMessageDialog(contentPane, "Please purchase item(s) to proceed!", "Error", JOptionPane.ERROR_MESSAGE);
 				}
 				
-				
-				
 			}
 		});
 		btnCompute.setHorizontalTextPosition(SwingConstants.CENTER);
@@ -680,7 +713,34 @@ public class billing_1 extends JFrame {
 		btnCompute.setBounds(534, 678, 98, 20);
 		contentPane.add(btnCompute);
 		
+		// checkboxes[] = 1st 10 checkboxes, checkboxes1[] = 2nd 10 checkboxes
 		JButton btnReceipt = new JButton("Receipt");
+		btnReceipt.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				if (checkboxes[0].isSelected()) { 
+					JOptionPane.showMessageDialog(null, "");
+				}
+				if (checkboxes[1].isSelected()) {
+				}
+				if (checkboxes[2].isSelected()) {
+				}
+				if (checkboxes[3].isSelected()) {
+				}
+				if (checkboxes[4].isSelected()) {
+				}
+				if (checkboxes[5].isSelected()) {
+				}
+				if (checkboxes[6].isSelected()) {
+				}
+				if (checkboxes[7].isSelected()) {
+				}
+				if (checkboxes[8].isSelected()) {
+				}
+				if (checkboxes[9].isSelected()) {
+				}
+			}
+		});
 		btnReceipt.setHorizontalTextPosition(SwingConstants.CENTER);
 		btnReceipt.setForeground(Color.WHITE);
 		btnReceipt.setFont(new Font("Segoe UI", Font.BOLD, 14));

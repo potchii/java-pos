@@ -14,6 +14,8 @@ import javax.swing.border.MatteBorder;
 import javax.swing.ImageIcon;
 import java.awt.Toolkit;
 import java.awt.event.ActionListener;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.awt.event.ActionEvent;
 import javax.swing.JRadioButton;
 import javax.swing.JCheckBox;
@@ -62,6 +64,33 @@ public class billing extends JFrame {
 			}
 		});
 	}
+	
+	public void Clock(JLabel lblNewLabel_1, JLabel lblCustomerName_1) {
+	    Thread clock = new Thread() {
+	        public void run() {
+	            try {
+	                for (;;) {
+	                    Calendar der = new GregorianCalendar();
+	                    int day = der.get(Calendar.DAY_OF_MONTH);
+	                    int month = der.get(Calendar.MONTH);
+	                    int year = der.get(Calendar.YEAR);
+
+	                    int sec = der.get(Calendar.SECOND);
+	                    int min = der.get(Calendar.MINUTE);
+	                    int hr = der.get(Calendar.HOUR);
+
+	                    lblNewLabel_1.setText("Date: " + month + '/' + day + '/' + year);
+	                    lblCustomerName_1.setText("Time: " + hr + ':' + min + ':' + sec);
+
+	                    sleep(1000);
+	                }
+	            } catch (InterruptedException e) {
+	                e.printStackTrace();
+	            }
+	        }
+	    };
+	    clock.start();
+	}
 
 	/**
 	 * Create the frame.
@@ -90,6 +119,7 @@ public class billing extends JFrame {
 		contentPane.add(lblCustomerName);
 		
 		textField = new JTextField();
+		textField.setFont(new Font("Tahoma", Font.PLAIN, 10));
 		textField.setBounds(107, 8, 86, 20);
 		contentPane.add(textField);
 		textField.setColumns(10);
@@ -151,13 +181,15 @@ public class billing extends JFrame {
 		
 		JLabel lblNewLabel_1 = new JLabel("Date");
 		lblNewLabel_1.setForeground(Color.WHITE);
-		lblNewLabel_1.setBounds(657, 11, 60, 14);
+		lblNewLabel_1.setBounds(657, 11, 102, 14);
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblCustomerName_1 = new JLabel("Time");
 		lblCustomerName_1.setForeground(Color.WHITE);
-		lblCustomerName_1.setBounds(657, 39, 27, 14);
+		lblCustomerName_1.setBounds(657, 39, 102, 14);
 		contentPane.add(lblCustomerName_1);
+		
+		Clock(lblNewLabel_1, lblCustomerName_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Items");
 		lblNewLabel_2.setForeground(Color.WHITE);

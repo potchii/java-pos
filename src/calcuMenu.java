@@ -1,3 +1,9 @@
+/*
+ * @author Ernest Benitez
+ * Github Repo link: https://github.com/potchii/java-pos
+ */
+
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -10,6 +16,10 @@ import javax.swing.SwingConstants;
 import javax.swing.border.MatteBorder;
 import javax.swing.JButton;
 import javax.swing.ImageIcon;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Toolkit;
+import java.awt.Cursor;
 
 public class calcuMenu extends JFrame {
 
@@ -35,6 +45,8 @@ public class calcuMenu extends JFrame {
 	 * Create the frame.
 	 */
 	public calcuMenu() {
+		setTitle("Menu");
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Ernest\\eclipse-workspace\\SecondSemester\\img\\icons8-laptop-coding-100.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 681, 489);
 		contentPane = new JPanel();
@@ -49,10 +61,18 @@ public class calcuMenu extends JFrame {
 		lblNewLabel.setForeground(new Color(255, 255, 255));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Leelawadee UI", Font.BOLD, 36));
-		lblNewLabel.setBounds(0, 62, 665, 99);
+		lblNewLabel.setBounds(0, 69, 665, 99);
 		contentPane.add(lblNewLabel);
 		
 		JButton btnNewButton = new JButton("");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				calcuLogin main = new calcuLogin();
+			    main.setVisible(true);
+			    
+			    dispose();
+			}
+		});
 		btnNewButton.setIcon(new ImageIcon("C:\\Users\\Ernest\\eclipse-workspace\\SecondSemester\\img\\icons8-lock-30.png"));
 		btnNewButton.setForeground(new Color(23, 25, 30));
 		btnNewButton.setFont(new Font("Leelawadee UI", Font.BOLD, 12));
@@ -62,6 +82,14 @@ public class calcuMenu extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				calculatorFrontend main = new calculatorFrontend();
+			    main.setVisible(true);
+			    
+			    dispose();
+			}
+		});
 		btnNewButton_1.setIcon(new ImageIcon("C:\\Users\\Ernest\\eclipse-workspace\\SecondSemester\\img\\icons8-calculator-24.png"));
 		btnNewButton_1.setHorizontalTextPosition(SwingConstants.CENTER);
 		btnNewButton_1.setForeground(new Color(23, 25, 30));
@@ -72,6 +100,14 @@ public class calcuMenu extends JFrame {
 		contentPane.add(btnNewButton_1);
 		
 		JButton btnNewButton_2 = new JButton("");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				payroll main = new payroll();
+			    main.setVisible(true);
+			    
+			    dispose();
+			}
+		});
 		btnNewButton_2.setIcon(new ImageIcon("C:\\Users\\Ernest\\eclipse-workspace\\SecondSemester\\img\\icons8-payroll-24.png"));
 		btnNewButton_2.setHorizontalTextPosition(SwingConstants.CENTER);
 		btnNewButton_2.setForeground(new Color(23, 25, 30));
@@ -94,10 +130,11 @@ public class calcuMenu extends JFrame {
 		contentPane.add(lblNewLabel_4_1_1);
 		
 		JLabel lblNewLabel_1 = new JLabel("EXERCISE 3");
+		lblNewLabel_1.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblNewLabel_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_1.setFont(new Font("Leelawadee UI", Font.BOLD, 25));
 		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Ernest\\eclipse-workspace\\SecondSemester\\img\\icons8-laptop-coding-50.png"));
-		lblNewLabel_1.setBounds(20, 11, 195, 47);
+		lblNewLabel_1.setBounds(10, 11, 195, 47);
 		contentPane.add(lblNewLabel_1);
 	}
 

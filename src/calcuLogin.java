@@ -1,3 +1,8 @@
+/*
+ * @author Ernest Benitez
+ * Github Repo link: https://github.com/potchii/java-pos
+ */
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -107,7 +112,7 @@ public class calcuLogin extends JFrame {
 				if ((userName.contains("admin") && password.contains("Admin123")) ||
 				    (userName.contains("user") && password.contains("1234")) ||
 				    (userName.contains("Admin") && password.contains("123456789"))) {
-				    menu main = new menu();
+				    calcuMenu main = new calcuMenu();
 				    main.setVisible(true);
 				    JOptionPane.showMessageDialog(contentPane, "Logged in as Admin.", "Login Authenticated", JOptionPane.PLAIN_MESSAGE);
 				    // dispose the current frame

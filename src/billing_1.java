@@ -1,3 +1,9 @@
+/*
+ * @author Ernest Benitez
+ * Github Repo link: https://github.com/potchii/java-pos
+ */
+
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;

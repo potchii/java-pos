@@ -1,3 +1,9 @@
+/*
+ * @author Ernest Benitez
+ * Github Repo link: https://github.com/potchii/java-pos
+ */
+
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -79,7 +85,7 @@ public class billing extends JFrame {
 	                    int min = der.get(Calendar.MINUTE);
 	                    int hr = der.get(Calendar.HOUR);
 
-	                    lblNewLabel_1.setText("Date: " + month + '/' + day + '/' + year);
+	                    lblNewLabel_1.setText("Date: " + (month + 1) + '/' + day + '/' + year);
 	                    lblCustomerName_1.setText("Time: " + hr + ':' + min + ':' + sec);
 
 	                    sleep(1000);
@@ -715,6 +721,36 @@ public class billing extends JFrame {
 		textField_24.setColumns(10);
 		textField_24.setBounds(512, 592, 98, 20);
 		contentPane.add(textField_24);
+		
+		JLabel lblTransactionDetails = new JLabel("Transaction Details");
+		lblTransactionDetails.setForeground(Color.WHITE);
+		lblTransactionDetails.setFont(new Font("Segoe UI", Font.BOLD, 20));
+		lblTransactionDetails.setBounds(23, 564, 191, 51);
+		contentPane.add(lblTransactionDetails);
+		
+		JLabel lblNewLabel_5_1_10 = new JLabel("100 Robux");
+		lblNewLabel_5_1_10.setForeground(Color.WHITE);
+		lblNewLabel_5_1_10.setFont(new Font("Leelawadee UI", Font.BOLD, 16));
+		lblNewLabel_5_1_10.setBounds(23, 621, 86, 20);
+		contentPane.add(lblNewLabel_5_1_10);
+		
+		JLabel lblNewLabel_5_1_11 = new JLabel("PHP 49.00");
+		lblNewLabel_5_1_11.setForeground(Color.WHITE);
+		lblNewLabel_5_1_11.setFont(new Font("Leelawadee UI", Font.BOLD, 16));
+		lblNewLabel_5_1_11.setBounds(128, 621, 86, 20);
+		contentPane.add(lblNewLabel_5_1_11);
+		
+		JLabel lblNewLabel_5_1_10_1 = new JLabel("150 Robux");
+		lblNewLabel_5_1_10_1.setForeground(Color.WHITE);
+		lblNewLabel_5_1_10_1.setFont(new Font("Leelawadee UI", Font.BOLD, 16));
+		lblNewLabel_5_1_10_1.setBounds(23, 649, 86, 20);
+		contentPane.add(lblNewLabel_5_1_10_1);
+		
+		JLabel lblNewLabel_5_1_11_1 = new JLabel("PHP 198.00");
+		lblNewLabel_5_1_11_1.setForeground(Color.WHITE);
+		lblNewLabel_5_1_11_1.setFont(new Font("Leelawadee UI", Font.BOLD, 16));
+		lblNewLabel_5_1_11_1.setBounds(128, 649, 86, 20);
+		contentPane.add(lblNewLabel_5_1_11_1);
 
 	}
 }
